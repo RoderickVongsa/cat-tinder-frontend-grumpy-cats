@@ -18,14 +18,14 @@ const App = () => {
   }, [])
 
   const readCat = () => {
-    fetch("http://localhost:3000/cats")
+    fetch("https://cat-tinder-salmon.onrender.com/cats")
       .then((response) => response.json())
       .then((data) => setCats(data))
       .catch((error) => console.log(error))
   }
 
   const createCat = (newCat) => {
-    fetch("http://localhost:3000/cats", {
+    fetch("https://cat-tinder-salmon.onrender.com/cats", {
       body: JSON.stringify(newCat),
       headers: {
         "Content-Type": "application/json"
